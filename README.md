@@ -16,7 +16,7 @@ This repository contains a variety of exercises, assignments, and projects curat
 - Database Integration: Using Python to interact with databases (SQL, NoSQL).
 ## Directories
 
-- [`0x00. Python - Hello, World`](https://github.com/Polarthebear/alx-higher_level_programming)
+- [`0x00. Python - Hello, World`](https://github.com/Polarthebear/alx-higher_level_programming) - Why Python programming is awesome.
 
 **I will add more as I complete them**
 ## Badges
