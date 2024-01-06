@@ -16,9 +16,9 @@ This repository contains a variety of exercises, assignments, and projects curat
 - Database Integration: Using Python to interact with databases (SQL, NoSQL).
 ## Directories
 
-- [`0x00. Python - Hello, World`](https://github.com/Polarthebear/alx-higher_level_programming) - Why Python programming is awesome.
+- [`0x00. Python - Hello, World`](https://github.com/Polarthebear/alx-higher_level_programming/blob/master/README.md) - Why Python programming is awesome.
 - [`0x01. Python - if/else, loops, functions`](https://github.com/Polarthebear/alx-higher_level_programming/blob/master/0x01-python-if_else_loops_functions/README.md) - What is a function and how do you use functions.
--[`0x02. Python - import & modules`](https://github.com/Polarthebear/alx-higher_level_programming/blob/master/0x02-python-import_modules/README.md) - How to use imported functions
+- [`0x02. Python - import & modules`](https://github.com/Polarthebear/alx-higher_level_programming/blob/master/0x02-python-import_modules/README.md) - How to use imported functions
 
 **I will add more as I complete them**
 ## Badges
