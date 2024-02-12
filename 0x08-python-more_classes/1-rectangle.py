@@ -2,10 +2,16 @@
 """Defines a rectangle by: (based on 0-rectangle.py)"""
 
 class Rectangle:
-
     """Representing a rectangle"""
 
+
     def __init__(self, width=0, height=0):
+        """ Initializing a new rectangle.
+
+        Args:
+        width (int): width of the rectangle
+        height (int): height of the rectangle.
+        """
         self.width = width
         self.height = height
 
