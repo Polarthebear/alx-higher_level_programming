@@ -60,6 +60,6 @@ class Rectangle:
         recta = []
         for n in range(self.__height):
             [recta.append('#') for m in range(self.__width)]
-            if i != self.__height - 1:
+            if n != self.__height - 1:
                 recta.append('\n')
         return ("".join(recta))
