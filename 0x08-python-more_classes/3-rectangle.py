@@ -54,8 +54,12 @@ class Rectangle:
 
     def my_print(self):
         """Printing a rectangle using the # character."""
-        for n in range(self.__height):
-            [print("#", end="") for n in rnage(self.__width)]
-            print("")
-        if self.__height == 0:
-            print("")
+        if self.__width == 0 or self.__height == 0:
+            return ("")
+
+        recta = []
+        for n in range(slef.__height):
+            [recta.append('#') for m in range(self.__width)]
+            if i != self.__height - 1:
+                recta.append('\n')
+        return ("".join(recta))
