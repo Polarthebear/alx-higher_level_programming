@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Defines a rectangle by: (based on 0-rectangle.py)"""
 
+
 class Rectangle:
     """Representing a rectangle"""
 
@@ -39,4 +40,3 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
-
