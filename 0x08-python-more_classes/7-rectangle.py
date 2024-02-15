@@ -9,7 +9,7 @@ class Rectangle:
         number_of_instances(int): Number of Rectangle instances.
         print_symbol: symbol for string representation
     """
-    numbe_of_instances = 0
+    number_of_instances = 0
     print_symbol = "#"
 
     def __init__(self, width=0, height=0):
