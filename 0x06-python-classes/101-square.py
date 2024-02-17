@@ -10,8 +10,8 @@ class Square:
         """Initializing a new square
 
         Args:
-            size = size of the new square
-            position = position of new square
+            size: size of the new square
+            position: position of new square
         """
         self.size = size
         self.position = position
@@ -61,12 +61,13 @@ class Square:
             print("#" * self.__size)
 
     def __str__(self):
-        """defining the print() representation of the square."""
+        """Defining the print() representation of the square."""
         if self.__size != 0:
-            [print("") for i in range(0, self.__position[1])]
-        for n in range(0, slef.__size):
-            [print(" ", end="") for i in range(0, slef.__position[0])]
-            [print('#', end="") for n in range(0, self.__size)]
-            if n != self.__size - 1:
+            [print("") for _ in range(0, self.__position[1])]
+        for _ in range(0, self.__size):
+            [print(" ", end="") for _ in range(0, self.__position[0])]
+            [print('#', end="") for _ in range(0, self.__size)]
+            if _ != self.__size - 1:
                 print("")
-        return ("")
+        return ""
+
