@@ -7,6 +7,11 @@ def is_safe(board, row, col, n):
         if board[i][col] == 'Q':
             return False
 
+    # Check if there is a queen in the same row
+    for i in range(n):
+        if board[row][i] == 'Q':
+            return False
+
     # Check upper left diagonal
     for i, j in zip(range(row-1, -1, -1), range(col-1, -1, -1)):
         if board[i][j] == 'Q':
