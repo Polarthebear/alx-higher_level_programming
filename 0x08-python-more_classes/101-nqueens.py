@@ -29,11 +29,23 @@ def solve_nqueens(board, row, n, solutions):
         solutions.append([''.join(row) for row in board])
         return
 
+    new_board = [row.copy() for row in board]
+
     for col in range(n):
-        if is_safe(board, row, col, n):
-            board[row][col] = 'Q'
-            solve_nqueens(board, row + 1, n, solutions)
-            board[row][col] = ' '
+        if is_safe(new_board, row, col, n):
+            new_board[row][col] = 'Q'
+            solve_nqueens(new_board, row + 1, n, solutions)
+            new_board[row][col] = ' '
+
+def print_solutions(n):
+    board = [[' ' for _ in range(n)] for _ in range(n)]
+    solutions = []
+    solve_nqueens(board, 0, n, solutions)
+
+    for solution in solutions:
+        for row in solution:
+            print(row)
+        print()
 
 def print_solutions(n):
     board = [[' ' for _ in range(n)] for _ in range(n)]
