@@ -5,9 +5,19 @@ Module takes two integers or floats as arguments and return their sum
 
 Usage:
 ======
+Importing module:
+        >>> mod = __import__("0-add_integer")
 
-Importing function from module:
-    >>> add_integer = __import__('0-add_integer').add_integer
+checking  module documentation:
+        >>> len(mod.__doc__) > 1
+        True
+
+Import the function from the module:
+	>>> add_integer = __import__("0-add_integer").add_integer
+
+checking function documentation:
+       >>> len(add_integer.__doc__) > 1
+       True
 
 
 - Adding two positive integers
