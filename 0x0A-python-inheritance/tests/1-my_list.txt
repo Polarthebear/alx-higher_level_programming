@@ -1,0 +1,112 @@
+Module for ``1-my_list.py``
+===========================
+
+Usage:
+======
+
+
+Importing module:
+>>> MyList = __import__('1-my_list').mylist
+>>>
+
+-------------------------------------------
+
+case 1: Common case
+
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(4)
+>>> my_list.append(2)
+>>> my_list.append(3)
+>>> my_list.append(5)
+>>> print(my_list)
+[1, 4, 2, 3, 5]
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 5]
+>>> print(my_list)
+[1, 4, 2, 3, 5]
+
+
+--------------------------------------------
+
+Case 2: Objects undefined
+
+>>> MyList = __import__('1-my_list').MyList
+>>> my_list2.print_sorted()
+Traceback (most recent call last):
+NameError: name 'my_list2' is not defined
+
+--------------------------------------------
+
+Case 2: Passing a list as an argument
+________________________________________
+>>> lst = [3, 2, 8]
+>>> my_list = MyList(lst)
+>>> my_list.print_sorted()
+[2, 3, 8]
+>>>
+
+
+
+Case 3: Empty list
+_________________________________
+>>> my_list = MyList([])
+>>> my_list
+[]
+>>>
+
+
+
+case 4: Passing a String
+___________________________
+>>> lst = [3, 5, 'hello']
+>>> my_list=MyList(lst)
+>>> my_list.sort()
+Traceback (most recent call last):
+TypeError: '<' not supported between instances of 'str' and 'int'
+>>>
+
+Case 5: unique Number
+__________________________________
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.print_sorted()
+[1]
+>>> print(my_list)
+[1]
+>>>
+
+
+
+Case 6: same number
+______________________________
+>>> my_list = MyList()
+>>> my_list.append(8)
+>>> my_list.append(8)
+>>> my_list.append(8)
+>>> my_list
+[8, 8, 8]
+>>>
+
+
+
+
+Case 7: Negative numbers
+___________________________________
+>>> my_list = MyList()
+>>> for i in range(-10, 2):
+...     my_list.append(i)
+...
+>>> my_list.print_sorted()
+[-10, -9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 1]
+>>>
+--------------------------------------
+
+
+Case 8: Base object
+________________________________
+>>> my_list = [2, 8, 3]
+>>> my_list.print_sorted()
+Traceback (most recent call last):
+AttributeError: 'list' object has no attribute 'print_sorted'
+>>>
