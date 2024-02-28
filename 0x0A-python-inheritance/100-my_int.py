@@ -9,7 +9,6 @@ class MyInt(int):
         """== needs to behave like !=."""
         return self.real != value
 
-
     def __ne__(self, value):
         """!= needs to behave like ==."""
         return self.real == value
