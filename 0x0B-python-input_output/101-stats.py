@@ -1,16 +1,5 @@
 #!/usr/bin/python3
-"""Reads from standard input and computes the metrics.
-
-This script reads lines from the standard input
-    - Processes them to compute metrics. 
-    - Prints the accumulated metrics. 
-
-    The metrics include the total file size and counts of different HTTP status codes.
-
-    Metrics:
-        - Total file size: The sum of file sizes from input lines.
-        - HTTP status code counts: Counts of different HTTP status codes.
-"""
+"""Reads from standard input and computes the metrics."""
 
 
 def print_stats(size, status_codes):
