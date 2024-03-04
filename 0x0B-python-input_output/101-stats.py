@@ -1,29 +1,27 @@
 #!/usr/bin/python3
-"""Reads from standard input and computes the metrics
+"""Reads from standard input and computes metrics
 
 After every 10 lines or if input of CTRL + C,
 the following statistics will be printed:
-        - The total file size up to that point
-        - Count of the read status codes up to that point
+    - The total file size up to that point
+    - Count of the read status codes up to that point
 """
-
 
 def print_stats(size, status_codes):
     """Print built up metrics
 
     Args:
-        size (int): The total file size calculated from input lines.
-        status_codes (dict): A dictionary containing 
-        counts of different HTTP status codes
+        size (int): Total file size calculated from input lines.
+        status_codes (dict): Dictionary containing
+        counts of diffrent HTTP status codes
 
     Return:
-        Displays the total file size and counts of 
-        each HTTP status code in a sorted order
+        Display the total file size and 
+        counts of each HTTP status code in a sorted order
     """
     print(f"File size: {size}")
     for key in sorted(status_codes):
         print(f"{key}: {status_codes[key]}")
-
 
 if __name__ == "__main__":
     import sys
@@ -37,14 +35,14 @@ if __name__ == "__main__":
         for line in sys.stdin:
             if line_count == 10:
                 print_stats(size, status_codes)
-                line_count = 0
+                line_count = 1
             else:
                 line_count += 1
 
             line_parts = line.split()
 
             try:
-                current_size = len(line)
+                current_size = int(line_parts[-1])
                 size += current_size
             except (IndexError, ValueError):
                 pass
