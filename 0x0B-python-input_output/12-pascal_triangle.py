@@ -3,19 +3,24 @@
 
 
 def pascal_triangle(n):
-    """representing Pascal's Triangle of size (n).
+    """Generate Pascal's Triangle.
 
-    Returns a list of lists of integers representing the triangle.
+    Args:
+        n (int): The number of rows in Pascal's Triangle.
+
+    Returns:
+        list: A list of lists representing Pascal's Triangle.
     """
     if n <= 0:
         return []
 
     tri = [[1]]
-    while len(tri) != n:
-        triangles = tri[-1]
-        tmp = [1]
-        for i in range(len(triangles) - 1):
-            tmp.append(triangles[i] + triangles[i + 1])
-        tmp.append(1)
-        tri.append(tmp)
-    return triangles
+    while len(tri) < n:
+        last_row = tri[-1]
+        new_row = [1]
+        for i in range(len(last_row) - 1):
+            new_row.append(last_row[i] + last_row[i + 1])
+        new_row.append(1)
+        tri.append(new_row)
+
+    return tri
