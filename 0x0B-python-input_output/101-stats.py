@@ -3,7 +3,15 @@
 
 
 def print_stats(size, status_codes):
-    """Print built up metrics."""
+    """Print built up metrics.
+
+    Args:
+        size (int): The total file size calculated from input lines.
+        status_codes (dict): A dictionary containing counts of different HTTP status codes.
+
+    Return:
+        Displays the total file size and counts of each HTTP status code in a sorted order.
+    """
     print(f"File size: {size}")
     for key in sorted(status_codes):
         print(f"{key}: {status_codes[key]}")
