@@ -1,11 +1,13 @@
 #!/usr/bin/python3
 """Reads from standard input and computes the metrics."""
 
+
 def print_stats(size, status_codes):
     """Print built up metrics."""
     print(f"File size: {size}")
     for key in sorted(status_codes):
         print(f"{key}: {status_codes[key]}")
+
 
 if __name__ == "__main__":
     import sys
@@ -34,7 +36,8 @@ if __name__ == "__main__":
             try:
                 current_code = line_parts[-2]
                 if current_code in valid_codes:
-                    status_codes[current_code] = status_codes.get(current_code, 0) + 1
+                    status_codes[current_code] =
+                    status_codes.get(current_code, 0) + 1
             except IndexError:
                 pass
 
@@ -43,4 +46,3 @@ if __name__ == "__main__":
     except KeyboardInterrupt:
         print_stats(size, status_codes)
         raise
-
