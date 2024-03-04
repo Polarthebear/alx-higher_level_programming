@@ -6,6 +6,10 @@ This script reads lines from the standard input
     - Prints the accumulated metrics. 
 
     The metrics include the total file size and counts of different HTTP status codes.
+
+    Metrics:
+        - Total file size: The sum of file sizes from input lines.
+        - HTTP status code counts: Counts of different HTTP status codes.
 """
 
 
