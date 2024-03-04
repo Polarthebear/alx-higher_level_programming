@@ -7,6 +7,7 @@ the following statistics will be printed:
     - Count of the read status codes up to that point
 """
 
+
 def print_stats(size, status_codes):
     """Print built up metrics
 
@@ -16,12 +17,13 @@ def print_stats(size, status_codes):
         counts of diffrent HTTP status codes
 
     Return:
-        Display the total file size and 
+        Display the total file size and
         counts of each HTTP status code in a sorted order
     """
     print(f"File size: {size}")
     for key in sorted(status_codes):
         print(f"{key}: {status_codes[key]}")
+
 
 if __name__ == "__main__":
     import sys
@@ -50,7 +52,8 @@ if __name__ == "__main__":
             try:
                 current_code = line_parts[-2]
                 if current_code in valid_codes:
-                    status_codes[current_code] = status_codes.get(current_code, 0) + 1
+                    status_codes[current_code] =
+                    status_codes.get(current_code, 0) + 1
             except IndexError:
                 pass
 
