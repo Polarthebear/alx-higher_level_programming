@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """Reads from standard input and computes the metrics
 
-
 After every 10 lines or if input of CTRL + C,
 the following statistics will be printed:
         - The total file size up to that point
@@ -38,14 +37,14 @@ if __name__ == "__main__":
         for line in sys.stdin:
             if line_count == 10:
                 print_stats(size, status_codes)
-                line_count = 1
+                line_count = 0
             else:
                 line_count += 1
 
             line_parts = line.split()
 
             try:
-                current_size = int(line_parts[-1])
+                current_size = len(line)
                 size += current_size
             except (IndexError, ValueError):
                 pass
@@ -53,8 +52,7 @@ if __name__ == "__main__":
             try:
                 current_code = line_parts[-2]
                 if current_code in valid_codes:
-                    status_codes[current_code] =
-                    status_codes.get(current_code, 0) + 1
+                    status_codes[current_code] = status_codes.get(current_code, 0) + 1
             except IndexError:
                 pass
 
