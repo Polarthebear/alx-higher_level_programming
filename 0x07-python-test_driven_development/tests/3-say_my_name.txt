@@ -1,0 +1,31 @@
+Module for 3-say_my_name.py
+==============================
+
+Module defines a name-printing function ``say_my_name(first_name, last_name="")``.
+
+Usage:
+======
+
+``say_my_name(...)`` prints "My name is <first_name> <last_name>".
+
+>>> say_my_name = __import__("3-say_my_name").say_my_name
+
+check two strings:
+	 >>> say_my_name("Kasiemobi", "Eke")
+	 My name is Kasiemobi Eke
+
+Check for 0ne arg:
+	 >>> say_my_name("Kasiemobi")
+	 My name is Kasiemobi
+
+Check a string and an integer:
+         >>> say_my_name("Kasiemob", 4)
+         Traceback (most recent call last):
+         ...
+         TypeError: last_name must be a string
+
+Check an integer and a string:
+         >>> say_my_name(4, "Kasiemobi")
+         Traceback (most recent call last):
+         ...
+         TypeError: first_name must be a string
