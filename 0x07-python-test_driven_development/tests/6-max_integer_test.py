@@ -45,7 +45,7 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_string(self):
         """Test a string."""
-        string = "Mashigo"
+        string = "Thato"
         self.assertEqual(max_integer(string), 'r')
 
     def test_list_of_strings(self):
