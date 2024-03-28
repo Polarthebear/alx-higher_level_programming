@@ -1,0 +1,2 @@
+-- Script that deletes the database in my server.
+DROP DATABASE IF EXISTS hbtn_0c_0;
