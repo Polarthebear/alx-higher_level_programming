@@ -1,15 +1,11 @@
 #!/usr/bin/node
 
 function factorial (n) {
-  if (isNaN(n) || n < 0) {
-    return 1; // Factorial of NaN or negative number is 1
-  } else if (n === 0) {
-    return 1; // Factorial of 0 is 1
+  if ((isNaN(n)) || (n === 1)) {
+    return 1;
   } else {
-    return n * factorial(n - 1); // Recursive call to compute factorial
+    return n * factorial(n - 1);
   }
 }
 
-const arg = parseInt(process.argv[2]);
-
-console.log('The factorial of', arg, 'is:', factorial(arg));
+console.log(factorial(parseInt(process.argv[2])));
