@@ -16,16 +16,16 @@ class Rectangle {
   }
 
   print () {
-	  for (let i = 0; i < this.height; i++) {
-		  let space = '';
-		  let y = 0;
-		  while (y < this.width) {
-			  space += 'X';
-			  y++;
-		  }
+    for (let i = 0; i < this.height; i++) {
+      let space = '';
+      let y = 0;
+      while (y < this.width) {
+        space += 'X';
+        y++;
+      }
 
-		  console.log(space);
-	  }
+      console.log(space);
+    }
   }
 }
 module.exports = Rectangle;
